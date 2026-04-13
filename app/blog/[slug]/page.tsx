@@ -9,10 +9,10 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = await getPostBySlug(slug);
   return {
-    title: `${post.title} | TODO`,
+    title: `${post.title} | Eleva Peptides`,
     description: post.description,
     alternates: {
-      canonical: `https://TODO/blog/${slug}`,
+      canonical: `https://elevapeptides.vercel.app/blog/${slug}`,
     },
   };
 }

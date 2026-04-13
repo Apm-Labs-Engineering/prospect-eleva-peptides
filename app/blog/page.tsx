@@ -3,17 +3,17 @@ import { getAllPosts } from "@/lib/blog";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "TODO",
-  description: "TODO",
-  keywords: "TODO",
+  title: "Blog | Eleva Peptides",
+  description: "Educational articles on peptide therapy, longevity, energy optimization, and physician-prescribed wellness from the Eleva Peptides team.",
+  keywords: "peptide therapy blog, longevity, anti-aging, energy recovery, telemedicine",
   openGraph: {
-    title: "TODO",
-    description: "TODO",
+    title: "Blog | Eleva Peptides",
+    description: "Science-backed insights on peptide therapy, longevity, and feeling your best after 30.",
     type: "website",
-    url: "TODO",
+    url: "https://elevapeptides.vercel.app/blog",
   },
   alternates: {
-    canonical: "https://www.apmlabs.io/blog",
+    canonical: "https://elevapeptides.vercel.app/blog",
   },
 };
 

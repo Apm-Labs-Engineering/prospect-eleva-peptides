@@ -2,7 +2,12 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0c2b23;
+  --primary: #0c2b23;
+  --primary-light: #194f3e;
+  --accent: #239e76;
+  --accent-bright: #22c55e;
+  --light: #e2f3ed;
 }
 
 @theme inline {
@@ -10,13 +15,6 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
@@ -27,25 +25,15 @@ body {
 
 /* =============================================================================
    ADA / WCAG 2.1 AA — Global Accessibility Styles
-   =============================================================================
-
-   These styles are load-bearing for compliance. Do not remove them.
-
-   SC 2.4.1  Bypass Blocks      — .skip-link lets keyboard users jump to main
-   SC 2.4.7  Focus Visible      — :focus-visible ring on all interactive elements
-   SC 2.3.3  Animation          — prefers-reduced-motion disables transitions
    ============================================================================= */
 
-/* --- Skip navigation link (SC 2.4.1) ---------------------------------------
-   Visually hidden until focused. Must be the first focusable element on the
-   page (see layout.tsx). Tab once from any page to reveal it. */
 .skip-link {
   position: absolute;
   top: -100%;
   left: 1rem;
   z-index: 9999;
   padding: 0.5rem 1rem;
-  background: #111827;
+  background: #0c2b23;
   color: #ffffff;
   font-size: 0.875rem;
   font-weight: 600;
@@ -57,31 +45,18 @@ body {
   top: 0;
 }
 
-/* --- Global focus ring (SC 2.4.7) ------------------------------------------
-   :focus-visible fires only on keyboard/sequential navigation, not mouse
-   clicks, so this does not interfere with existing mouse-click UI styling.
-   The outline is placed outside the element (offset: 2px) so it is never
-   clipped by overflow:hidden. Existing `outline-none` utility classes on
-   inputs are intentional — they are replaced by the focus:ring Tailwind
-   utilities applied directly in the component. */
 :focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid #239e76;
   outline-offset: 2px;
 }
 
-/* Tailwind's outline-none on inputs suppresses the above for mouse users.
-   Re-apply it for keyboard users via focus-visible on those elements. */
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid #239e76;
   outline-offset: 0;
 }
 
-/* --- Reduced motion (SC 2.3.3) ---------------------------------------------
-   Users who set "Reduce Motion" in their OS preferences get near-instant
-   transitions. All animation/transition durations are collapsed to 1ms
-   (not 0 — some JS reads transitionend events and 0ms can break them). */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
