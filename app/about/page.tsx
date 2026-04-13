@@ -21,16 +21,8 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col pt-16">
       {/* Hero */}
-      <section className="relative min-h-[60vh] flex items-center">
-        <Image
-          src="/images/post1-dark.jpg"
-          alt="Eleva Peptides — our approach"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0c2b23]/95 via-[#0c2b23]/88 to-[#0c2b23]/95" />
-        <div className="relative z-10 mx-auto max-w-4xl px-6 py-20 text-center text-white">
+      <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-[#0c2b23] via-[#194f3e] to-[#0c2b23]">
+        <div className="mx-auto max-w-4xl px-6 py-20 text-center text-white">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-[#239e76]">About Eleva</p>
           <h1 className="mb-6 font-[family-name:var(--font-playfair)] text-5xl font-bold md:text-6xl">
             We Believe Biology<br />Can Be Fixed.
