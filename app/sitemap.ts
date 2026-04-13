@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const base = "https://elevapeptides.vercel.app";
+const base = "https://prospect-eleva-peptides.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
